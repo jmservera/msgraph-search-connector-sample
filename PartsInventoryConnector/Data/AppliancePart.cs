@@ -42,7 +42,7 @@ public class AppliancePart
                 { "lastModifiedBy", "System" },
                 { "createdDateTime", DateTime.UtcNow },
                 { "lastModifiedDateTime", DateTime.UtcNow },
-                { "iconUrl", $"https://jmservera.github.io/msgraph-search-connector-sample/images/{PartNumber}" },
+                { "iconUrl", $"https://jmservera.github.io/msgraph-search-connector-sample/images/{PartNumber}.png" },
                 { "itemUrl", $"https://jmservera.github.io/msgraph-search-connector-sample/{PartNumber}" }
             }
         };

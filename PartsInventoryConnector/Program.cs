@@ -326,13 +326,14 @@ async Task UpdateItemsFromDatabaseAsync(bool uploadModifiedOnly, string? tenantI
         Console.WriteLine($"Uploading changes since last upload at {lastUploadTime.ToLocalTime()}");
 
         partsToUpload = partsDb.Parts
-            .Where(p => EF.Property<DateTime>(p, "LastUpdated") > lastUploadTime)
+             .Where(p => EF.Property<DateTime>(p, "LastUpdated") > lastUploadTime)
             .ToList();
 
         partsToDelete = partsDb.Parts
             .IgnoreQueryFilters()
             .Where(p => EF.Property<bool>(p, "IsDeleted")
-                && EF.Property<DateTime>(p, "LastUpdated") > lastUploadTime)
+                && EF.Property<DateTime>(p, "LastUpdated") > lastUploadTime
+                )
             .ToList();
     }
     else
