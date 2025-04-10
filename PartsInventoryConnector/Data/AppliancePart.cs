@@ -41,8 +41,9 @@ public class AppliancePart
                 { "createdBy", "System" },
                 { "lastModifiedBy", "System" },
                 { "createdDateTime", DateTime.UtcNow },
-                { "lastModifiedDateTime", DateTime.UtcNow }
-                // ,{ "iconUrl", "https://fastly.picsum.photos/id/19/200/200.jpg?hmac=U8dBrPCcPP89QG1EanVOKG3qBsZwAvtCLUrfeXdE0FI" }
+                { "lastModifiedDateTime", DateTime.UtcNow },
+                { "iconUrl", $"https://jmservera.github.io/msgraph-search-connector-sample/images/{PartNumber}" },
+                { "itemUrl", $"https://jmservera.github.io/msgraph-search-connector-sample/{PartNumber}" }
             }
         };
 

@@ -260,6 +260,8 @@ async Task RegisterSchemaAsync()
                 new Property { Name = "lastModifiedBy", Type = PropertyType.String, IsQueryable = false, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.LastModifiedBy }},
                 new Property { Name = "createdDateTime", Type = PropertyType.DateTime, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.CreatedDateTime }},
                 new Property { Name = "lastModifiedDateTime", Type = PropertyType.DateTime, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.LastModifiedDateTime }},
+                new Property { Name = "iconUrl", Type = PropertyType.String, IsQueryable = false, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.IconUrl }},
+                new Property { Name = "itemUrl", Type = PropertyType.String, IsQueryable = false, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.Url }},
             },
         };
 
