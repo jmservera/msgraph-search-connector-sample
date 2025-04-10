@@ -37,7 +37,12 @@ public class AppliancePart
                 { "price", Price },
                 { "inventory", Inventory },
                 { "appliances@odata.type", "Collection(String)" },
-                { "appliances", Appliances }
+                { "appliances", Appliances },
+                { "createdBy", "System" },
+                { "lastModifiedBy", "System" },
+                { "createdDateTime", DateTime.UtcNow },
+                { "lastModifiedDateTime", DateTime.UtcNow }
+                // ,{ "iconUrl", "https://fastly.picsum.photos/id/19/200/200.jpg?hmac=U8dBrPCcPP89QG1EanVOKG3qBsZwAvtCLUrfeXdE0FI" }
             }
         };
 

@@ -45,7 +45,7 @@ while (choice != 0)
         choice = -1;
     }
 
-    switch(choice)
+    switch (choice)
     {
         case 0:
             // Exit the program
@@ -171,7 +171,7 @@ async Task<ExternalConnection?> SelectExistingConnectionAsync()
         // Display connections
         Console.WriteLine("Choose one of the following connections:");
         var menuNumber = 1;
-        foreach(var connection in connections)
+        foreach (var connection in connections)
         {
             Console.WriteLine($"{menuNumber++}. {connection.Name}");
         }
@@ -255,7 +255,11 @@ async Task RegisterSchemaAsync()
                 new Property { Name = "description", Type = PropertyType.String, IsQueryable = false, IsSearchable = true, IsRetrievable = true, IsRefinable = false },
                 new Property { Name = "price", Type = PropertyType.Double, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = true },
                 new Property { Name = "inventory", Type = PropertyType.Int64, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = true },
-                new Property { Name = "appliances", Type = PropertyType.StringCollection, IsQueryable = true, IsSearchable = true, IsRetrievable = true, IsRefinable = false }
+                new Property { Name = "appliances", Type = PropertyType.StringCollection, IsQueryable = true, IsSearchable = true, IsRetrievable = true, IsRefinable = false },
+                new Property { Name = "createdBy", Type = PropertyType.String, IsQueryable = false, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.CreatedBy }},
+                new Property { Name = "lastModifiedBy", Type = PropertyType.String, IsQueryable = false, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.LastModifiedBy }},
+                new Property { Name = "createdDateTime", Type = PropertyType.DateTime, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.CreatedDateTime }},
+                new Property { Name = "lastModifiedDateTime", Type = PropertyType.DateTime, IsQueryable = true, IsSearchable = false, IsRetrievable = true, IsRefinable = false, Labels = new List<Label?>() { Label.LastModifiedDateTime }},
             },
         };
 
