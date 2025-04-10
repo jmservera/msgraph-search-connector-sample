@@ -11,10 +11,7 @@
           "items": [
             {
               "type": "TextBlock",
-              "text": "__${name} (Part #${partNumber})__",
-              "color": "accent",
-              "size": "medium",
-              "spacing": "none",
+              "text": "[__${name} (Part #${partNumber})__](${itemUrl})",
               "$when": "${name != \"\"}"
             },
             {
@@ -23,10 +20,16 @@
               "wrap": true,
               "maxLines": 3,
               "$when": "${description != \"\"}"
+            },
+            {
+              "type": "Image",
+              "url": "${iconUrl}",
+              "horizontalAlignment": "Center",
+              "size": "small",
+              "altText": "${name}"
             }
           ],
-          "horizontalAlignment": "Center",
-          "spacing": "none"
+          "horizontalAlignment": "Center"
         },
         {
           "type": "Column",
@@ -46,10 +49,16 @@
               ]
             }
           ],
-          "spacing": "none",
-          "horizontalAlignment": "right"
+          "horizontalAlignment": "Right"
         }
       ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "View Item",
+      "url": "${itemUrl}"
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
